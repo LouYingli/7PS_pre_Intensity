@@ -46,7 +46,6 @@ pathway = os.getcwd()
 # list all the inputs which can be modify 
 # define the climate zones that need to be considered
 climate = ['1A','2A','2B','3A','3B','3C','4A','4B','4C','5A','5B','6A','6B','7A','8A']# define the needed climate zones
-# schedule information(15 min intervel) exclude design day schedule
 
 # number of samples for training and testing meta-models
 #number of samples in each climate zone = num_sample * number of sensitive model inputs
@@ -107,7 +106,7 @@ import parallelSimuMeta as ps
 #os.chdir(pathway)
 for cz in climate:
     model_results,run_time = ps.parallelSimu(cz,1)
-rmtree('./Model/update_models')
+#rmtree('./Model/update_models')
 print run_time
 
 #########################################################################################
